@@ -1620,6 +1620,30 @@ section {
   color: #fff;
 }
 
+@media (max-width: 991px) {
+  .navbar.navbar-mobile ul {
+    background: #fffdf9;
+    border: 1px solid var(--recanto-line);
+    border-radius: 16px;
+    box-shadow: 0 16px 36px rgba(45, 29, 20, 0.24);
+  }
+
+  .navbar.navbar-mobile a,
+  .navbar.navbar-mobile a:focus {
+    color: var(--recanto-text);
+    letter-spacing: 0.02em;
+    text-transform: none;
+    font-weight: 600;
+  }
+
+  .navbar.navbar-mobile a:hover,
+  .navbar.navbar-mobile .active,
+  .navbar.navbar-mobile .active:focus,
+  .navbar.navbar-mobile li:hover > a {
+    color: var(--recanto-primary);
+  }
+}
+
 .get-started-btn {
   background: linear-gradient(140deg, var(--recanto-primary) 0%, #9d5d41 100%);
   color: #fff;
