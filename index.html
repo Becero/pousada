@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
@@ -281,39 +281,57 @@
         </div>
       </div>
 
-      <div>
-        <iframe style="border:0; width:100%; height:350px;" src="https://www.google.com/maps?q=Campos+do+Jord%C3%A3o+SP&output=embed" allowfullscreen="" loading="lazy"></iframe>
+      <div class="contact-map-wrapper">
+        <iframe
+          style="border:0; width:100%; height:350px;"
+          src="https://www.google.com/maps?q=Pousada+Recanto+Brumas,+R.+das+Hort%C3%AAncias,+285+-+Alto+Boa+Vista,+Campos+do+Jord%C3%A3o+-+SP,+12460-000&output=embed"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Mapa da Pousada Recanto Brumas">
+        </iframe>
       </div>
 
       <div class="container">
         <div class="row mt-5 gy-4">
           <div class="col-lg-4">
             <div class="info">
-              <div class="address">
+              <div class="address info-item">
                 <i class="ri-map-pin-line"></i>
                 <h4>Localização</h4>
-                <p>Campos do Jordão - SP<br>(atualizar endereço completo)</p>
+                <p>
+                  Pousada Recanto Brumas, R. das Hortências, 285 - Alto Boa Vista, Campos do Jordão - SP, 12460-000
+                  <br>
+                  <a href="https://maps.google.com/?q=Pousada+Recanto+Brumas,+R.+das+Hort%C3%AAncias,+285+-+Alto+Boa+Vista,+Campos+do+Jord%C3%A3o+-+SP,+12460-000" target="_blank" rel="noopener noreferrer">Ver rota no Google Maps</a>
+                </p>
               </div>
 
-              <div class="phone">
+              <div class="phone info-item">
                 <i class="ri-phone-line"></i>
                 <h4>WhatsApp</h4>
-                <p><a href="#">(XX) XXXXX-XXXX</a></p>
+                <p>
+                  <a href="https://wa.me/5512996131717?text=Olá!%20Quero%20consultar%20valores%20e%20disponibilidade%20na%20Recanto%20Brumas." target="_blank" rel="noopener noreferrer">+55 12 99613-1717</a>
+                </p>
               </div>
 
-              <div class="email">
+              <div class="email info-item">
                 <i class="ri-mail-line"></i>
                 <h4>E-mail</h4>
-                <p><a href="mailto:contato@seudominio.com.br">contato@seudominio.com.br</a></p>
+                <p><a href="mailto:reservas@recantobrumas.com.br">reservas@recantobrumas.com.br</a></p>
+              </div>
+
+              <div class="contact-cta">
+                <a class="contact-link-btn" href="https://wa.me/5512996131717?text=Olá!%20Gostaria%20de%20fazer%20uma%20reserva%20na%20Recanto%20Brumas." target="_blank" rel="noopener noreferrer">Reservar pelo WhatsApp</a>
               </div>
             </div>
           </div>
 
           <div class="col-lg-8">
-            <form action="https://formsubmit.co/contato@seudominio.com.br" method="post" role="form" class="php-email-form">
+            <form action="https://formsubmit.co/reservas@recantobrumas.com.br" method="post" role="form" class="php-email-form">
               <input type="hidden" name="_subject" value="Novo contato - site Recanto Brumas">
               <input type="hidden" name="_captcha" value="false">
               <input type="hidden" name="_template" value="table">
+              <input type="hidden" name="_autoresponse" value="Recebemos sua mensagem e retornaremos em breve com as opções de hospedagem.">
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Seu nome" required>
@@ -323,12 +341,18 @@
                 </div>
               </div>
               <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Assunto" required>
+                <input type="tel" class="form-control" name="phone" id="phone" placeholder="Telefone com DDD (opcional)">
               </div>
               <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Escreva sua mensagem" required></textarea>
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Assunto (ex.: Consulta de datas)" required>
               </div>
-              <div class="text-center"><button type="submit">Enviar Mensagem</button></div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="6" placeholder="Escreva sua mensagem (datas desejadas, quantidade de hóspedes e dúvidas)." required></textarea>
+              </div>
+              <div class="text-center">
+                <button type="submit">Enviar Solicitação</button>
+                <p class="contact-form-note">Retorno em horário comercial, por e-mail ou WhatsApp.</p>
+              </div>
             </form>
           </div>
         </div>
@@ -341,8 +365,8 @@
       <h3>Recanto Brumas</h3>
       <p>Hospedagem com aconchego em Campos do Jordão.</p>
       <div class="social-links">
-        <a href="#" class="twitter"><i class="bx bxl-whatsapp"></i></a>
-        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="https://wa.me/5512996131717?text=Olá!%20Quero%20fazer%20uma%20reserva." class="twitter" target="_blank" rel="noopener noreferrer" aria-label="Falar pelo WhatsApp"><i class="bx bxl-whatsapp"></i></a>
+        <a href="https://www.instagram.com/recantobrumas/" class="instagram" target="_blank" rel="noopener noreferrer" aria-label="Instagram do Recanto Brumas"><i class="bx bxl-instagram"></i></a>
       </div>
       <div class="copyright">
         &copy; 2026 <strong><span>Recanto Brumas</span></strong>. Todos os direitos reservados.
@@ -366,3 +390,8 @@
 </body>
 
 </html>
+
+
+
+
+

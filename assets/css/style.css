@@ -1905,11 +1905,32 @@ section {
   min-height: 430px;
 }
 
+.contact-map-wrapper {
+  padding: 0 12px;
+}
+
+.contact-map-wrapper iframe {
+  display: block;
+  border-radius: 16px;
+  box-shadow: 0 14px 30px rgba(62, 42, 30, 0.12);
+}
+
 .contact .info {
   border: 1px solid var(--recanto-line);
   border-radius: 16px;
   padding: 24px;
   background: #fff;
+}
+
+.contact .info .phone,
+.contact .info .email {
+  margin-top: 0;
+}
+
+.contact .info .info-item + .info-item {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--recanto-line);
 }
 
 .contact .info i {
@@ -1925,11 +1946,50 @@ section {
   color: var(--recanto-muted);
 }
 
+.contact .info p a {
+  font-weight: 600;
+}
+
+.contact .info small {
+  display: block;
+  margin-top: 6px;
+  color: var(--recanto-muted);
+}
+
+.contact .contact-cta {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px dashed var(--recanto-line);
+}
+
+.contact .contact-link-btn {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  border-radius: 999px;
+  background: linear-gradient(140deg, var(--recanto-accent) 0%, #c8914b 100%);
+  color: #fff;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  box-shadow: 0 10px 22px rgba(157, 102, 61, 0.3);
+}
+
+.contact .contact-link-btn:hover {
+  color: #fff;
+  transform: translateY(-1px);
+  box-shadow: 0 14px 26px rgba(157, 102, 61, 0.35);
+}
+
 .contact .php-email-form {
   background: #fff;
   border: 1px solid var(--recanto-line);
   border-radius: 16px;
   box-shadow: 0 14px 30px rgba(62, 42, 30, 0.08);
+  padding: 28px;
 }
 
 .contact .php-email-form input,
@@ -1952,6 +2012,12 @@ section {
 
 .contact .php-email-form button[type=submit]:hover {
   background: linear-gradient(140deg, var(--recanto-primary-strong) 0%, var(--recanto-primary) 100%);
+}
+
+.contact .contact-form-note {
+  margin: 14px 0 0;
+  font-size: 0.86rem;
+  color: var(--recanto-muted);
 }
 
 .back-to-top {
@@ -2038,6 +2104,14 @@ section {
 
   .faq-photo {
     min-height: 300px;
+  }
+
+  .contact-map-wrapper {
+    padding: 0;
+  }
+
+  .contact .php-email-form {
+    padding: 22px;
   }
 }
 
