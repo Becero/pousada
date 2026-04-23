@@ -177,12 +177,14 @@
    */
   window.addEventListener('load', () => {
     let portfolioContainer = select('.portfolio-container');
-    if (portfolioContainer) {
+    let portfolioFilters = select('#portfolio-flters li', true);
+
+    // This page has no active portfolio filters. Skip Isotope to avoid
+    // masonry positioning issues on small screens.
+    if (portfolioContainer && portfolioFilters.length > 0) {
       let portfolioIsotope = new Isotope(portfolioContainer, {
         itemSelector: '.portfolio-item'
       });
-
-      let portfolioFilters = select('#portfolio-flters li', true);
 
       on('click', '#portfolio-flters li', function(e) {
         e.preventDefault();
@@ -204,8 +206,24 @@
    * Initiate portfolio lightbox 
    */
   const portfolioLightbox = GLightbox({
-    selector: '.portfolio-lightbox'
+    selector: '.portfolio-lightbox',
+    loop: true,
+    touchNavigation: true
   });
+
+  /**
+   * Mobile: allow opening the gallery by tapping the card itself.
+   */
+  on('click', '.acomodacao .portfolio-item', function(e) {
+    if (!window.matchMedia('(max-width: 991px)').matches) return;
+    if (e.target.closest('.portfolio-lightbox')) return;
+
+    const previewLink = this.querySelector('.portfolio-lightbox');
+    if (!previewLink) return;
+
+    e.preventDefault();
+    previewLink.click();
+  }, true);
 
   /**
    * Portfolio details slider

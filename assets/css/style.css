@@ -2106,6 +2106,22 @@ section {
     min-height: 300px;
   }
 
+  .acomodacao .portfolio-item {
+    margin-bottom: 0;
+  }
+
+  .acomodacao .portfolio-item .portfolio-info {
+    opacity: 1;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 14px 62px 14px 16px;
+  }
+
+  .acomodacao .portfolio-item .portfolio-info .preview-link {
+    right: 16px;
+  }
+
   .contact-map-wrapper {
     padding: 0;
   }
