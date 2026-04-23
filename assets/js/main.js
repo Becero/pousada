@@ -173,36 +173,6 @@
   });
 
   /**
-   * Porfolio isotope and filter
-   */
-  window.addEventListener('load', () => {
-    let portfolioContainer = select('.portfolio-container');
-    let portfolioFilters = select('#portfolio-flters li', true);
-
-    // This page has no active portfolio filters. Skip Isotope to avoid
-    // masonry positioning issues on small screens.
-    if (portfolioContainer && portfolioFilters.length > 0) {
-      let portfolioIsotope = new Isotope(portfolioContainer, {
-        itemSelector: '.portfolio-item'
-      });
-
-      on('click', '#portfolio-flters li', function(e) {
-        e.preventDefault();
-        portfolioFilters.forEach(function(el) {
-          el.classList.remove('filter-active');
-        });
-        this.classList.add('filter-active');
-
-        portfolioIsotope.arrange({
-          filter: this.getAttribute('data-filter')
-        });
-
-      }, true);
-    }
-
-  });
-
-  /**
    * Initiate portfolio lightbox 
    */
   const portfolioLightbox = GLightbox({

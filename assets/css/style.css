@@ -1805,18 +1805,29 @@ section {
 }
 
 .acomodacao .portfolio-item {
+  position: relative;
   border-radius: 16px;
   overflow: hidden;
   box-shadow: 0 14px 30px rgba(57, 38, 27, 0.18);
 }
 
 .acomodacao .portfolio-item img {
+  display: block;
+  width: 100%;
+  top: 0;
   transition: transform 0.5s ease;
   min-height: 285px;
   object-fit: cover;
 }
 
 .acomodacao .portfolio-item .portfolio-info {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+  z-index: 2;
+  padding: 16px 68px 16px 16px;
   background: linear-gradient(180deg, rgba(35, 22, 15, 0.04) 0%, rgba(35, 22, 15, 0.78) 100%);
   display: flex;
   flex-direction: column;
@@ -1833,7 +1844,12 @@ section {
 }
 
 .acomodacao .portfolio-item:hover img {
+  top: 0;
   transform: scale(1.06);
+}
+
+.acomodacao .portfolio-item .portfolio-info .preview-link {
+  right: 18px;
 }
 
 .recanto-experiencias {
